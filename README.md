@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Note Taker App
 
-## Getting Started
+A **Note Taker App** built with **Next.js** and **Tailwind CSS** to manage and organize notes with features like dark mode toggle, note pinning, and more.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Dark Mode Toggle**: Switch between light and dark themes.
+- **Note Pinning**: Pin important notes to keep them at the top.
+- **Note Editing**: Edit your existing notes easily.
+- **Note Deletion**: Remove notes when no longer needed.
+- **Responsive Design**: Works across various screen sizes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: A React framework for building optimized web applications.
+- **Tailwind CSS**: A utility-first CSS framework to design clean UIs.
+- **Lucide-React**: Icons used for note management UI (edit, delete, and pin).
+- **LocalStorage**: Used to persist notes data across page reloads.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
 
-## Learn More
+1. **Add a Note**: Fill in the title and content fields, then click "Add Note" to save it.
+2. **Edit a Note**: Click the edit icon (✏️) to modify an existing note.
+3. **Delete a Note**: Click the trash icon (🗑️) to remove a note.
+4. **Pin/Unpin a Note**: Click the pin icon (📍/📌) to toggle pinning.
+5. **Dark Mode**: Use the moon/sun icon (🌙/☀️) in the header to toggle dark mode.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How It Works
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Note State**: Notes are stored in a state variable and initialized from `localStorage`.
+2. **Add/Update/Delete Notes**: Notes can be created, updated, or removed via corresponding functions (`handleAddNote`, `handleUpdateNote`, `handleDeleteNote`).
+3. **Pinning**: Notes can be pinned or unpinned using the `togglePinNote` function. Pinned notes are shown at the top.
+4. **Dark Mode**: Managed using a state that toggles CSS classes for dark and light themes.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
